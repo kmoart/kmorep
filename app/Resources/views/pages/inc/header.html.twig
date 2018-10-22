@@ -7,8 +7,11 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
   <a class="navbar-brand" href="#">Symfony 3 CRUD Application</a>
   
-
+	{% for success_message in app.session.flashbag.get('message') %}
+		<div class="alert alert-success">{{ success_message }}</div>
+	{% endfor %}
   
 </nav>
